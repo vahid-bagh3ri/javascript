@@ -1,21 +1,41 @@
-function func(z,y) {
-    let x =z;
-        if (true) {
-            let x = 'vahid'
-            console.log(x)
-            console.log(y)
-        }
+const NAMES = { age : 23};
 
-        console.log(x)
-}
+NAMES.age = 20;
 
-func()
+console.log(NAMES);
 
 
-var array = [1,2,3,4];
-for (let index = 0; index < array.length; index++) {
-    console.log(index);
-}
+// function func(str,age){
+//     let x = "lolo"
+//     console.log(`${str[0]}${x} ages = ${age}`)
+// }
+
+
+// func`kabiri's ${7}`
+
+
+
+// function func(z,y) {
+//     let x =z;
+//         if (true) {
+//             let x = 'vahid'
+//             console.log(x)
+//             console.log(y)
+//         }
+
+//         console.log(x)
+// }
+
+// func()
+
+
+// var array = [1,2,3,4];
+// for (let index = 0; index < array.length; index++) {
+//     console.log(index);
+// }
+
+
+
 
 
 // -let 
