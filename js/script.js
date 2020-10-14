@@ -1,41 +1,41 @@
-const NAMES = { age : 23};
-
-NAMES.age = 20;
-
-console.log(NAMES);
-
-
-// function func(str,age){
-//     let x = "lolo"
-//     console.log(`${str[0]}${x} ages = ${age}`)
+// function Car(company, model , year ) {
+//     this.company = company
+//     this.model = model
+//     this.year = year
 // }
 
 
-// func`kabiri's ${7}`
+// let car1 = new Car("ford", "mustung" , 2000 )
 
 
+// console.log(car1);
 
-// function func(z,y) {
-//     let x =z;
-//         if (true) {
-//             let x = 'vahid'
-//             console.log(x)
-//             console.log(y)
-//         }
+class Car{
+    constructor(company, model , year ){
 
-//         console.log(x)
-// }
+    this.company = company
+    this.model = model
+    this.year = year 
+    }
 
-// func()
+    run(){
+        return ' speed up to 200'
+    }
+}
 
+class IranCar extends Car {
+    constructor (make , model , year , color){
+        super(make , model ,year)
+        this.color = color
+    }
 
-// var array = [1,2,3,4];
-// for (let index = 0; index < array.length; index++) {
-//     console.log(index);
-// }
+    fly(){
+        return 'car is flying'
+    }
+    go(){
+        return this.run
+    }
+}
 
-
-
-
-
-// -let 
+let car1 = new IranCar ("ford", "mustung" , 2000 , 'red' )
+console.log(car1);
