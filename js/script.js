@@ -1,55 +1,21 @@
 
+let list = [1,2,3,4,5,6,7,8,9]
 
+// let list2 = Array.of(2)
+// let list3 = Array.from(list,item => item * 5) 
 
-// let symbol1 = Symbol('fullname')
-// let symbol2 = Symbol('fullname')
+// console.log(list.map (item => item * 2));
+// console.log(list3); -*-
 
+// console.log(list3.filter(item => item === 20));
 
-
-// let obj = {
-//     name: 'vahid' ,
-//     [symbol1] : 22
+// for(let item of list.entries()){
+//     console.log(item);
 // }
 
+// let arr = list.entries();
+// console.log(arr.next());
 
-// console.log(obj);
+// console.log(list.fill(40,5,7));
 
-// for (let o in obj) {
-//     console.log(o);
-    
-// }
-
-// console.log(obj[Symbol('fullname')]);
-// console.log(symbol1 == symbol2);
-
-// ------------------------------------------------------------
-
-// let symbol1 = Symbol.for('fullname')
-
-// let obj = {
-//     name : 'vahid' , 
-//     [symbol1] : 22
-// }
-
-// let symbolN = Symbol.for('fullname')
-
-
-// console.log(symbol1 == symbolN);
-
-// console.log(obj[symbolN]);
-
-class ReplaceX {
-    constructor(value){
-        this.value = value
-    }
-
-    // [Symbol.replace](string){
-    //     return 'vahid'
-    // }
-
-    [Symbol.replace](string){
-        return `/${string}/${this.value}`
-    }
-}
-
-console.log('foo'.replace(new ReplaceX('bar')));
+console.log(list.copyWithin(3,4,6));
