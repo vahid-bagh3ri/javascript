@@ -1,27 +1,14 @@
-class Foo {
-    constructor(){
-        this.log = []
-    }
 
-    set current(value){
-        this.log.push(value)
-    }
+let name = ' vahid'
+let keyname = 'fullname'
 
-
-    get latest(){
-        if (this.log.length === 0) {
-            return undefined
-        }
-        return this.log[this.log.length - 1]
+let obj ={
+    name :name,
+    [keyname]: "vahid bagheri",
+    'say hello'() {
+        return 'hello vahid'
     }
 }
 
 
-
-
-let bar = new Foo();
-bar.current='A';
-bar.current= 'b';
-
-
-console.log(bar.latest);
+console.log(obj);
