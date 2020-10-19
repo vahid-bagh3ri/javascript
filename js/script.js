@@ -1,21 +1,46 @@
-
-let list = [1,2,3,4,5,6,7,8,9]
-
-// let list2 = Array.of(2)
-// let list3 = Array.from(list,item => item * 5) 
-
-// console.log(list.map (item => item * 2));
-// console.log(list3); -*-
-
-// console.log(list3.filter(item => item === 20));
-
-// for(let item of list.entries()){
-//     console.log(item);
+// let nameIt = names[Symbol.iterator]()
+// console.log(nameIt.next);
+// for (const name of names) {
+//     console.log(names);
 // }
 
-// let arr = list.entries();
-// console.log(arr.next());
 
-// console.log(list.fill(40,5,7));
+// let user ={
+//     id: 1,
+//     name: 'vahid' ,
+//     email: 'vahid@gmail.com',
+//     posts: [
+//         {
+//             id : 1,
+//             title : 'this is post one'
+//         },
+//         {
+//             id : 2,
+//             title : 'this is post two'
+//         }
+//     ]
+// }
 
-console.log(list.copyWithin(3,4,6));
+
+// names[Symbol.iterator] = function () {
+//     let items = this.posts
+//     let step = 0
+//     return{
+//         next(){
+//             let obj ={
+//                 done : step >=  items.length
+//             }
+//             step++
+//             return obj
+//         }
+//     }
+// }
+
+
+
+
+// let nameIt = names[Symbol.iterator]()
+// console.log(nameIt.next());
+// for (const name of names) {
+//     console.log(name);    
+// }
