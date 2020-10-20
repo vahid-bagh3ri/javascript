@@ -1,46 +1,61 @@
-// let nameIt = names[Symbol.iterator]()
-// console.log(nameIt.next);
-// for (const name of names) {
-//     console.log(names);
-// }
+// let myFirstPromise = new Promise((resolve , reject)=>{
+//     setTimeout(() => {
+//         reject('this is an error')
+//     } , 2000)
+
+// })
 
 
-// let user ={
-//     id: 1,
-//     name: 'vahid' ,
-//     email: 'vahid@gmail.com',
-//     posts: [
-//         {
-//             id : 1,
-//             title : 'this is post one'
-//         },
-//         {
-//             id : 2,
-//             title : 'this is post two'
-//         }
-//     ]
-// }
 
+// console.log('run 1');
+// myFirstPromise
+//     .then(data => {
+//         console.log(data);
+//     })
+//     .catch(err => console.log(err))
+// console.log('run 3');
 
-// names[Symbol.iterator] = function () {
-//     let items = this.posts
-//     let step = 0
-//     return{
-//         next(){
-//             let obj ={
-//                 done : step >=  items.length
+// function getData(url) {
+//     const httpRequest = new XMLHttpRequest()
+//     httpRequest.open("get", url)
+//     httpRequest.onreadystatechange = function () {
+//             if (this.readyState == XMLHttpRequest.DONE) {
+//                 if(this.status == 200){
+//                     return this.responseText
+//                 }
+//             else if(this.status == 404) {
+//                 return "data not found"
+//             } else {
+//                 return "something goes wrong"
 //             }
-//             step++
-//             return obj
 //         }
 //     }
+//     httpRequest.send()
 // }
 
+// console.log(getData ('https://jsonplaceholder.typicode.com/todos/1'))
+// -----------------------------------------------------------------------------------------------------------
 
-
-
-// let nameIt = names[Symbol.iterator]()
-// console.log(nameIt.next());
-// for (const name of names) {
-//     console.log(name);    
+// function getData(url) {
+//     return new Promise((resolev , reject) => {
+//             const httpRequest = new XMLHttpRequest()
+//             httpRequest.open("GET", url)
+//             httpRequest.onreadystatechange = function() {
+//                     console.log(XMLHttpRequest.DONE);
+//                     if (this.readyState == XMLHttpRequest.DONE) {
+//                         if(this.status == 200) {
+//                             resolve(this.responseText)
+//                         }
+//                         else if(this.status == 404) {
+//                             reject("data not found") 
+//                         } else {
+//                             reject("something goes wrong")
+//                         }
+//                 }
+//             }
+//             httpRequest.send()
+//     })
 // }
+// getData ('https://jsonplaceholder.typicode.com/todos')
+//     .then(data => console.log(data))
+
