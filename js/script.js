@@ -12,10 +12,10 @@
 
 //     console.log(list.get)
 
-let mySymbol = Symbol('my data')
-let arr=[['key1' , 'hesam' ],['key2' , 'vahid jon' ],['key3' , 'vahid nafes' ]]
+// let mySymbol = Symbol('my data')
+// let arr=[['key1' , 'hesam' ],['key2' , 'vahid jon' ],['key3' , 'vahid nafes' ]]
 
-    let list = new Map(arr)
+//     let list = new Map(arr)
     // list.set('key1' , 'vahid agha')
     // list.set('key2' , 'vahid jon')
     // list.set('key3' , 'vahid nafes')
@@ -35,6 +35,28 @@ let arr=[['key1' , 'hesam' ],['key2' , 'vahid jon' ],['key3' , 'vahid nafes' ]]
     //     console.log(key, value);
     // }
 
-        for (const key  of list.keys()) {
-        console.log(key);
-    }
+    //     for (const key  of list.keys()) {
+    //     console.log(key);
+    // }
+    // ----------------------------------------------------------------------------------------
+    // let list = new Set([1,2,3,4,5,6,7,8,8,9,4,3,2,1,1,,5,3,6,4,7,4])
+    // let list = new Set()
+    // list.add(1)
+    // list.add('hesam')
+    // list.add(2)
+    // list.add(1)
+
+    // list.delete(2)
+
+    // console.log(list.entries());
+
+    // for (const [key , value] of list.entries()) {
+    //     console.log(key , value);
+    // }
+
+    // console.log(list.keys());
+    // console.log(list.values());
+    // console.log(list.has(2));
+    // console.log([ ...list]);
+
+    
