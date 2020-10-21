@@ -37,7 +37,7 @@
 // -----------------------------------------------------------------------------------------------------------
 
 // function getData(url) {
-//     return new Promise((resolev , reject) => {
+//     return new Promise((resolve , reject) => {
 //             const httpRequest = new XMLHttpRequest()
 //             httpRequest.open("GET", url)
 //             httpRequest.onreadystatechange = function() {
@@ -59,3 +59,45 @@
 // getData ('https://jsonplaceholder.typicode.com/todos')
 //     .then(data => console.log(data))
 
+function getData(url) {
+    return new Promise((resolve , reject) => {
+            const httpRequest = new XMLHttpRequest()
+            httpRequest.open("GET", url)
+            httpRequest.onreadystatechange = function() {
+                    console.log(XMLHttpRequest.DONE);
+                    if (this.readyState == XMLHttpRequest.DONE) {
+                        if(this.status == 200) {
+                            resolve(this.responseText)
+                        }
+                        else if(this.status == 404) {
+                            reject("data not found") 
+                        } else {
+                            reject("something goes wrong")
+                        }
+                }
+            }
+            httpRequest.send()
+    })
+}
+
+
+function paresToJason(dataText) {
+    return new Promise((resolve , reject) => {
+        setTimeout(() => {
+            try {
+                resolve(JSON.parse(dataText))
+            } catch (error){
+                reject(error)
+            }
+        }, 2000);
+    }
+
+    )
+}
+
+getData ('https://jsonplaceholder.typicode.com/todos')
+    .then(data => console.log(data))
+    .then((json) => {
+        console.log(json)
+    })
+    .catch(err => console.log(err))
