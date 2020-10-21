@@ -59,4 +59,24 @@
     // console.log(list.has(2));
     // console.log([ ...list]);
 
-    
+
+    class Car {
+        constructor(){
+            this.value = new Array(1000000).join('---')
+        }
+    }
+
+    window.car = new Car()
+
+
+    // let list = new WeakMap()
+    // list.set('key1' , 'hesam')
+    // list.set(window.car, 'ali')
+
+    let list = new WeakSet([window.car,{b:2}])
+
+    // delete window.car
+    // console.log(window.car);
+    console.log(list);
+    // console.log(list);
+
