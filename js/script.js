@@ -1,137 +1,40 @@
-// let myFirstPromise = new Promise((resolve , reject)=>{
-//     setTimeout(() => {
-//         reject('this is an error')
-//     } , 2000)
+// let mySymbol = Symbol('my data')
+// let myObj = {}
+// let myFunc = function () {}
 
-// })
-
-
-
-// console.log('run 1');
-// myFirstPromise
-//     .then(data => {
-//         console.log(data);
-//     })
-//     .catch(err => console.log(err))
-// console.log('run 3');
-
-// function getData(url) {
-//     const httpRequest = new XMLHttpRequest()
-//     httpRequest.open("get", url)
-//     httpRequest.onreadystatechange = function () {
-//             if (this.readyState == XMLHttpRequest.DONE) {
-//                 if(this.status == 200){
-//                     return this.responseText
-//                 }
-//             else if(this.status == 404) {
-//                 return "data not found"
-//             } else {
-//                 return "something goes wrong"
-//             }
-//         }
-//     }
-//     httpRequest.send()
-// }
-
-// console.log(getData ('https://jsonplaceholder.typicode.com/todos/1'))
-// -----------------------------------------------------------------------------------------------------------
-
-// function getData(url) {
-//     return new Promise((resolve , reject) => {
-//             const httpRequest = new XMLHttpRequest()
-//             httpRequest.open("GET", url)
-//             httpRequest.onreadystatechange = function() {
-//                     console.log(XMLHttpRequest.DONE);
-//                     if (this.readyState == XMLHttpRequest.DONE) {
-//                         if(this.status == 200) {
-//                             resolve(this.responseText)
-//                         }
-//                         else if(this.status == 404) {
-//                             reject("data not found") 
-//                         } else {
-//                             reject("something goes wrong")
-//                         }
-//                 }
-//             }
-//             httpRequest.send()
-//     })
-// }
-// getData ('https://jsonplaceholder.typicode.com/todos')
-//     .then(data => console.log(data))
-// ------------------------------------------------------------
-
-// function getData(url) {
-//     return new Promise((resolve , reject) => {
-//             const httpRequest = new XMLHttpRequest()
-//             httpRequest.open("GET", url)
-//             httpRequest.onreadystatechange = function() {
-//                     console.log(XMLHttpRequest.DONE);
-//                     if (this.readyState == XMLHttpRequest.DONE) {
-//                         if(this.status == 200) {
-//                             resolve(this.responseText)
-//                         }
-//                         else if(this.status == 404) {
-//                             reject("data not found") 
-//                         } else {
-//                             reject("something goes wrong")
-//                         }
-//                 }
-//             }
-//             httpRequest.send()
-//     })
-// }
-
-
-// function paresToJason(dataText) {
-//     return new Promise((resolve , reject) => {
-//         setTimeout(() => {
-//             try {
-//                 resolve(JSON.parse(dataText))
-//             } catch (error){
-//                 reject(error)
-//             }
-//         }, 2000)
-//     })
-// }
-
-// getData ('https://jsonplaceholder.typicode.com/todos')
-//     .then(data => console.log(data))
-//     .then((json) => {
-//         console.log(json)
-//     })
-//     .catch(err => console.log(err))
-
-
-// function doSomething() {
-//     let name = 'hesam'
-//     return Promise.reject('erroooor')
-//     return Promise.resolve(name)
-
-
-// }
-
-// doSomething().then((data) => console.log(data) , err => console.log(err))
+//     let list = new Map()
+//     list.set('key1' , 'vahid agha')
+//     list.set(mySymbol , 22)
+//     list.set(myObj, 'razaviiii ')
+//     list.set(myFunc , 500)
 
 
 
-let promise1 = new Promise((resolve , reject) => {
-    setTimeout(() => {
-        reject('rejected')
-    }, 2000)
-})
+//     console.log(list.get)
 
-let num =42
+let mySymbol = Symbol('my data')
+let arr=[['key1' , 'hesam' ],['key2' , 'vahid jon' ],['key3' , 'vahid nafes' ]]
 
+    let list = new Map(arr)
+    // list.set('key1' , 'vahid agha')
+    // list.set('key2' , 'vahid jon')
+    // list.set('key3' , 'vahid nafes')
+    // list.set(mySymbol , 22)
 
-let promise3 = new Promise((resolve , reject) => {
-    setTimeout(() => {
-        resolve('resolved')
-    }, 1000)
-})
+    // list.clear()
+    // console.log(list.has('key2'));
+    // console.log(list)
 
-Promise.race([promise1 , num , promise3])
-    .then(data => {
-        console.log(data)
-    })
-    .catch(err => console.log(err))
+    // list.forEach((val , key) => {
+    //     console.log(key , val);
+    // })
 
+    // console.log(list.entries());
+
+    // for (const [key , value]  of list) {
+    //     console.log(key, value);
+    // }
+
+        for (const key  of list.keys()) {
+        console.log(key);
+    }
